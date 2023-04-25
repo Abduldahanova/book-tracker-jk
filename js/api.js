@@ -9,3 +9,11 @@ export const getBooks = async () => {
   const books = await response.json()
   return books
 }
+export const getBook = async (id) => {
+    const response = await fetch(createApiRoute(`/books/detail/${id}`));
+    const book = await response.json();
+    return book;
+}
+
+
+
